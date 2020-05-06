@@ -24,6 +24,8 @@ void     ft_memcpy_main(void)
    size_t i;
    size_t ok = 0;
 
+	bzero(buff3, 40);
+	bzero(buff4, 40);
    i = 0; 
    memcpy(buff1, src, 22);
    ft_memcpy(buff2, src, 22);
@@ -41,7 +43,9 @@ void     ft_memcpy_main(void)
    
    i = 0;
    memcpy(buff3, src, 5);
+	//printf("|%s|\n", memcpy(buff3, src, 5));
    ft_memcpy(buff4, src, 5);
+   //printf("|%s|\n", ft_memcpy(buff4, src, 5));
    while (buff3[i] || buff4[i])
    {
 	   if (strcmp(&buff3[i], &buff4[i]) != 0)
@@ -55,8 +59,8 @@ void     ft_memcpy_main(void)
    }
 
    i = 0;
-  // memcpy(buff5, src, 22);
-  // printf("|%s|\n", ft_memcpy(buff6, src, 22));
+  //memcpy(buff5, src, 22);
+  //printf("|%s|\n", ft_memcpy(buff6, src, 22));
    ft_memcpy(buff6, src, 22);
   // printf("|%s|\n", src);
    while (src[i])
